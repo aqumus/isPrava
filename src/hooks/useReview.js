@@ -25,7 +25,7 @@ const mockReviewValue = {
     'Quisque sit amet tincidunt ligula. Maecenas volutpat, arcu sit amet iaculis scelerisque, nunc tellus accumsan massa, non interdum lectus massa ut nisl. Aliquam vitae tellus quis felis rhoncus commodo.\n\nIn hac habitasse platea dictumst. Vivamus vitae tincidunt nisi.\nEtiam non congue lectus. Duis lobortis sed mi at suscipit.'
 };
 
-export function useReview(value = mockReviewValue) {
+export function useReview(value = initialReviewValue) {
   const [state, setState] = useState(value);
   const setReview = value => {
     const updateValue = {
