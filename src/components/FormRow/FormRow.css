@@ -1,0 +1,36 @@
+.row-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+.row-container label {
+  margin-bottom: 5px;
+  color: gray;
+}
+
+.row-container input {
+  padding: 5px;
+  min-height: 15px;
+  flex-grow: 1;
+  border: 0px;
+  border-bottom: 1px solid #e8da83;
+}
+
+.row-container input:focus {
+  outline: 0px;
+  border-bottom: 1px solid #6f6109;
+}
+
+.row-container textarea {
+  padding: 5px;
+  height: 75px;
+  width: 45vw;
+  resize: none;
+  border: 0px;
+  background: #fff9f0;
+}
+
+.row-container textarea:focus {
+  outline: 1px solid #6f6109;
+}

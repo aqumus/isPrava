@@ -1,0 +1,32 @@
+.review-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 45vw;
+  text-align: initial;
+}
+
+.review-header {
+  color: #a07b1d;
+  font-size: 30px;
+  margin: 0px;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.review-form button {
+  width: 100px;
+  height: 20px;
+  background: #c5a451;
+  color: white;
+}
+
+.review-form button:hover {
+  background: #79690ec7;
+  cursor: pointer;
+}
