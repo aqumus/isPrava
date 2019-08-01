@@ -1,6 +1,12 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import './FormRow.css';
 import { ReviewDetail } from '../ReviewDetail';
+
+export const detailsInput = [
+  'surroundingAreaDetails',
+  'constructionDetails',
+  'decorDetails'
+];
 
 function _FormRow({
   label,
@@ -11,25 +17,49 @@ function _FormRow({
   onChange,
   isSubmitted
 }) {
+  const onInputChange = useCallback(
+    event => {
+      if (detailsInput.includes(reviewKey)) {
+        onChange({
+          [reviewKey]: {
+            ...value,
+            value: event.target.value
+          }
+        });
+      } else {
+        onChange({ [reviewKey]: event.target.value });
+      }
+    },
+    [value, onChange, reviewKey]
+  );
+
   return (
     <div className="row-container">
       <label htmlFor={label}>{label}</label>
       {isSubmitted ? (
-        <ReviewDetail>{value}</ReviewDetail>
+        inputType === 'textarea' ? (
+          <ReviewDetail
+            reviewKey={reviewKey}
+            value={value}
+            setComment={onChange}
+          />
+        ) : (
+          <span>{value}</span>
+        )
       ) : inputType === 'textarea' ? (
         <textarea
           rows={7}
           cols={30}
           placeholder={placeholder}
-          defaultValue={value}
-          onChange={event => onChange({ [reviewKey]: event.target.value })}
+          defaultValue={value.value}
+          onChange={onInputChange}
         />
       ) : (
         <input
           id={label}
           value={value}
           placeholder={placeholder}
-          onChange={event => onChange({ [reviewKey]: event.target.value })}
+          onChange={onInputChange}
           type={inputType}
         />
       )}

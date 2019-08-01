@@ -7,9 +7,13 @@ import './VillaReview.css';
 export function VillaReview() {
   const { review, setReview } = useReview();
   const onSubmit = useCallback(() => {
-    const result = Persistence.set(review);
+    const updatedReview = {
+      ...review,
+      isSubmitted: true
+    };
+    const result = Persistence.set(updatedReview);
     if (result) {
-      setReview({ isSubmitted: true });
+      setReview(updatedReview);
     }
   }, [review, setReview]);
   const onDelete = useCallback(() => {
