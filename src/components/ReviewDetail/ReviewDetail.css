@@ -9,53 +9,8 @@
 }
 
 .commented-review {
-  background: #e8da83;
-}
-
-.edit {
-  display: inline-block;
-  width: 28px;
-  height: 26px;
-  background: gray;
-}
-
-.edit-icon {
-  width: 20px;
-  padding: 3px;
-  height: 20px;
-}
-
-.record-comment-container {
-  width: 225px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  -webkit-box-shadow: 9px -8px 14px 0px rgba(168, 166, 158, 1);
-  -moz-box-shadow: 9px -8px 14px 0px rgba(168, 166, 158, 1);
-  box-shadow: 9px -8px 14px 0px rgba(168, 166, 158, 1);
-}
-
-.record-comment-container textarea {
-  padding: 5px;
-  height: 100%;
-  width: 96%;
-  resize: none;
-  border: 0px;
-  background: #fff9f0;
-}
-
-.record-comment-container footer {
-  background: #c5a451;
-  height: 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.record-comment-container span {
-  margin: 0 10px;
   cursor: pointer;
+  background: #e8da83;
 }
 
 .recorded-comment {
