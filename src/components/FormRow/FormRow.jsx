@@ -41,7 +41,7 @@ function _FormRow({
           <ReviewDetail
             reviewKey={reviewKey}
             value={value}
-            setComment={onChange}
+            setReview={onChange}
           />
         ) : (
           <span>{value}</span>

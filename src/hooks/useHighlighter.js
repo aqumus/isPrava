@@ -6,9 +6,7 @@ export const initialHighlightedValue = {
   comment: ''
 };
 
-export const useHighlighter = () => {
-  const [highlighted, _setHighlighted] = useState(initialHighlightedValue);
-  const setHighlighted = newHighlighted =>
-    _setHighlighted({ ...highlighted, ...newHighlighted });
+export const useHighlighter = (value = initialHighlightedValue) => {
+  const [highlighted, setHighlighted] = useState(value);
   return { highlighted, setHighlighted };
 };

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import config from '../config';
 import { Persistence } from '../services';
+import { initialHighlightedValue } from './useHighlighter';
 
 const { persistenceKey } = config;
 
@@ -9,9 +10,9 @@ export const initialReviewValue = {
   dateOfVisit: undefined,
   pincode: undefined,
   ownerName: undefined,
-  surroundingAreaDetails: { value: '', highlighted: [] },
-  constructionDetails: { value: '', highlighted: [] },
-  decorDetails: { value: '', highlighted: [] },
+  surroundingAreaDetails: { value: '', highlighted: initialHighlightedValue },
+  constructionDetails: { value: '', highlighted: initialHighlightedValue },
+  decorDetails: { value: '', highlighted: initialHighlightedValue },
   isSubmitted: false
 };
 
